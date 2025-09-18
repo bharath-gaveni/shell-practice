@@ -1,0 +1,10 @@
+#!/bin/bash
+echo "1. signup to github"
+echo "2. install vs code"
+echo "3. open folder in vs code where you store all repos"
+echo "create repo in github"
+echo "4. clone the repo"
+echo "5. do something"
+echo "6. add to staging area"
+echo "7. commit to local repo"
+echo "8. push to central repo"

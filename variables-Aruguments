@@ -1,0 +1,11 @@
+#!/bin/bash
+
+#Aruguments
+person1=$1
+person2==$2
+
+echo "$person1: Hello Mr.$person1"
+echo "$person2:Yeah Hi Mr.$person1"
+echo "$person1: I just your son at school"
+echo "$person2: yes just now I have dropped at school"
+

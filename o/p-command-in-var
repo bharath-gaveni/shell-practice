@@ -1,0 +1,11 @@
+#!/bin/bash
+
+#VAR_NAME=$(command)
+#DATE=$(date)
+
+StartDate=$(date +%s)
+sleep 10
+EndDate=$(date +%s)
+
+TotalTime=$(($EndDate-$StartDate))
+echo "Total time taken for exceution of the script:$TotalTime"

@@ -10,3 +10,5 @@ echo "sum is $sum"
 
 LEADERS=("bharath" "modi" "putin")
 echo "All Leaders:${LEADERS[@]}"
+echo "First leader:${LEADERS[0]}"
+echo "second leader:$LEADERS[1]"

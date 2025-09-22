@@ -8,7 +8,7 @@ if [ $id -ne 0 ]; then
 fi   
 
 
-VALIDATE(){
+VALIDATE () {
 if [ $1 -ne 0 ]; then
     echo "ERROR: installing $2 is FAILED"
     exit 1

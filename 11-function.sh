@@ -8,7 +8,6 @@ if [ $id -ne 0 ]; then
 fi   
 
 
-
 VALIDATE(){
 if [ $1 -ne 0 ]; then
     echo "ERROR: installing $2 is FAILED"
@@ -17,7 +16,7 @@ else
     echo "installing $2 is SUCCESS"
 }
 
-dnf install mysql -y 
+dnf install mysqql -y 
 VALIDATE $? "mysql"
 
 dnf install nginx -y

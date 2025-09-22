@@ -8,7 +8,7 @@ N="\e[0m"
 
 
 Log_Folder="/var/log/shell-script"
-script_name="$($0) | cut -d "." -f1"
+script_name="$ (echo($0) | cut -d "." -f1)"
 Log_File=$Log_Folder/$script_name.log
 mkdir -p $Log_Folder
 

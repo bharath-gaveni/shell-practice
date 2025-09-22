@@ -6,5 +6,5 @@ Y="\e[33m"
 N="\e[34m"
 
 
-echo -e "ERROR is $R printing"
+echo -e "ERROR is $R printing $N"
 echo "checking for RED color"

@@ -19,7 +19,7 @@ if [ $1 -ne 0 ]; then
     echo -e "ERROR: installing $2 is $R FAILED $N"
     exit 1
 else
-    echo -e "installing $2 is $R SUCCESS $N"
+    echo -e "installing $2 is $G SUCCESS $N"
 fi    
 }
 

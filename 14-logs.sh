@@ -48,9 +48,9 @@ else
     echo -e "$Y skipping $N the nginx installation"
 fi    
 
-dnf list installed python3 &>>Log_File
+dnf list installed python3 &>>$Log_File
 if [ $? -ne 0 ]; then
-dnf install python3 -y &>>Log_File
+dnf install python3 -y &>>$Log_File
 VALIDATE $? "python3" 
 else 
     echo -e "$Y skipping $N the python3 installation"

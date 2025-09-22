@@ -6,11 +6,11 @@ G="\e[32m"
 Y="\e[33m"
 N="\e[0m"
 
-
 Log_Folder="/var/log/shell-script"
-script_name="$ (echo($0) | cut -d "." -f1)"
-Log_File=$Log_Folder/$script_name.log
+script_name=$( echo $0 | cut -d "." -f1 )
+Log_File="$Log_Folder/$script_name.log"
 mkdir -p $Log_Folder
+echo "Script execution start time: $(date)"
 
 
 
@@ -55,4 +55,4 @@ VALIDATE $? "python3"
 else 
     echo -e "$Y skipping $N the python3 installation"
 fi           
-
+echo "Script execution end time: $(date)"

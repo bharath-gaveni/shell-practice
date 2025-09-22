@@ -8,7 +8,7 @@ if [ $id -ne 0 ]; then
 fi   
 
 
-dnf install mysql -y 
+dnf install mysql11 -y 
 if [ $? -ne 0 ]; then
     echo "ERROR: installing mysql is FAILED"
 else 
@@ -21,4 +21,4 @@ if [ $? ne 0 ]; then
 else
     echo "installing nginx is SUCCESS"
 fi
-        
+

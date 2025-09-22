@@ -14,6 +14,7 @@ if [ $1 -ne 0 ]; then
     exit 1
 else
     echo "installing $2 is SUCCESS"
+fi    
 }
 
 dnf install mysqqql -y 

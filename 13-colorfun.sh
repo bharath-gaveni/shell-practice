@@ -34,6 +34,11 @@ else
     echo "skipping the nginx installation"
 fi    
 
+dnf list installed python3
+if [ $? -ne 0 ]; then
 dnf install python3 -y
-VALIDATE $? "python3"        
+VALIDATE $? "python3" 
+else 
+    echo "skipping the python3 installation"
+fi           
 

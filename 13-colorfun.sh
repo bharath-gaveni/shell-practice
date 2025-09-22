@@ -32,6 +32,7 @@ dnf install nginx -y
 VALIDATE $? "nginx"
 else
     echo "skipping the nginx installation"
+fi    
 
 dnf install python3 -y
 VALIDATE $? "python3"        

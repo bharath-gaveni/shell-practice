@@ -16,7 +16,7 @@ else
     echo "installing $2 is SUCCESS"
 }
 
-dnf install mysqql -y 
+dnf install mysqqql -y 
 VALIDATE $? "mysql"
 
 dnf install nginx -y

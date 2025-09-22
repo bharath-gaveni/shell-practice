@@ -8,7 +8,7 @@ if [ $id -ne 0 ]; then
 fi   
 
 
-dnf install mysql11 -y 
+dnf install mysql -y 
 if [ $? -ne 0 ]; then
     echo "ERROR: installing mysql is FAILED"
     exit 1
@@ -22,4 +22,11 @@ if [ $? ne 0 ]; then
 else
     echo "installing nginx is SUCCESS"
 fi
+
+dnf install python3 -y
+if [ $? ne 0 ]; then 
+    echo "ERROR: installing python3 is FAILED"
+else 
+    echo "installing python3 is SUCCESS"
+fi        
 

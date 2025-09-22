@@ -19,6 +19,7 @@ fi
 dnf install nginxxx -y
 if [ $? -ne 0 ]; then
     echo "ERROR: installing nginx is FAILED"
+    exit 1
 else
     echo "installing nginx is SUCCESS"
 fi
@@ -26,6 +27,7 @@ fi
 dnf install python3 -y
 if [ $? -ne 0 ]; then 
     echo "ERROR: installing python3 is FAILED"
+    exit 1
 else 
     echo "installing python3 is SUCCESS"
 fi        

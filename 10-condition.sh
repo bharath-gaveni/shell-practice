@@ -5,10 +5,20 @@ id=$(id -u)
 if [ $id -ne 0 ]; then
     echo "ERROR: you need root access privilage to execute the script"
     exit 1
-fi    
+fi   
+
+
 dnf install mysql -y 
 if [ $? -ne 0 ]; then
     echo "ERROR: installing mysql is FAILED"
 else 
     echo "installing mysql is success"
 fi
+
+dnf install nginx -y
+if [ $? ne 0 ]; then
+    echo "ERROR: installing nginx is FAILED"
+else
+    echo "installing nginx is SUCCESS"
+fi
+        

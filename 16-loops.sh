@@ -30,7 +30,7 @@ else
 fi    
 }
 
-for package in {$@}
+for package in $@
 do
     dnf list installed $package &>>$Log_File
     if [ $? -ne 0 ]; then

@@ -30,7 +30,7 @@ else
 fi    
 }
 
-for package in $@
+for package in {$@}
 do
     dnf list installed $package &>>$Log_File
     if [ $? -ne 0 ]; then
@@ -38,7 +38,7 @@ do
         dnf install $package -y &>>Log_File
         VALIDATE $? $package
     else
-        echo -e " $Y skipping $N the $package` installation" | tee -a $Log_File
+        echo -e " $Y skipping $N the $package installation" | tee -a $Log_File
     fi
 done      
         echo "Script execution end time: $(date)"

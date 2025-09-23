@@ -42,4 +42,3 @@ do
     fi
 done      
         echo "Script execution end time: $(date)"
-

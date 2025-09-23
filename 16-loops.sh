@@ -22,7 +22,7 @@ else
 fi    
 }
 
-for package in ($@)
+for package in {$@}
 dnf list installed $1
 if [ $? -ne 0 ]; then
     echo "installing the $1"    

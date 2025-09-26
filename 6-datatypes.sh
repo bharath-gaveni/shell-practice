@@ -15,7 +15,8 @@ echo "sum is: $sum"
 
 
 
- numbers=(234 456 567 545)
- echo "First number: ${numbers[@]}"
- echo "second number: ${numbers[0]}"
+ numbers=("234" "456" "567" "545")
+ echo "All number: ${numbers[@]}"
+ echo "first number: ${numbers[0]}"
+ echo "second number: ${numbers[1]}"
  echo "7th number: ${numbers[6]}"

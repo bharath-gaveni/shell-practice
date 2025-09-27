@@ -20,20 +20,30 @@ Validate() {
     fi       
 }
 
-dnf list installed nginxx
+dnf list installedd nginx
 if [ $? -ne 0 ]; then
 dnf install nginx -y
 Validate $? "nginx"
 else
     echo "nginx is already installed so skipping"
 fi
-    
 
+dnf list installedd mysql
+if [ $? -ne 0 ]; then
 dnf install mysql -y
 Validate $? "mysql"
+else
+    echo "mysql is already installed so skipping"
+fi    
 
+dnf list installedd python3
+if [ $? -ne 0 ]; then
 dnf install python3
 Validate $? "python3"
+else
+    echo "python3 is already installed so skipping"
+fi
+
      
 
 

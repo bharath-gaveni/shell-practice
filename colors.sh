@@ -9,7 +9,7 @@ Y="\e[0;33m"
 # shell-script will proceed further if it has error so we need to stop manually using command exit 1 for failure exit 0=success
 id=$(id -u)
 
- if [ $? -ne 0 ]; then
+ if [ $id -ne 0 ]; then
     echo -e "$R Please run this script with root access $N"
     exit 1
 fi

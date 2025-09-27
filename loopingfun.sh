@@ -5,7 +5,7 @@ G="\e[0;32m"
 Y="\e[0;33m"
 
 id=$(id -u)
-if [ $? -ne 0 ]; then
+if [ $id -ne 0 ]; then
     echo " $R please execute this script as root user $N"
     exit 1
 fi

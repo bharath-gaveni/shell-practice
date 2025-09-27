@@ -7,7 +7,7 @@ Y="\e[0;33m"
 id=$(id -u)
 
 logs_folder=/var/log/shell-script
-script_name=$($0 | cut -d "." -f1)
+script_name=$(echo $0 | cut -d "." -f1)
 log_file=$logs_folder/$script_name.log
 
 mkdir -p $logs_folder

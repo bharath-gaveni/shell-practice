@@ -1,6 +1,6 @@
 #!/bin/bash
 
-for i in (1...39)
+for i in {1..39}
 do
-    echo "$i"
+    echo $i
 done

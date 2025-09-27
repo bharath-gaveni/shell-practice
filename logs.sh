@@ -10,14 +10,13 @@ logs_folder=/var/log/shell-script
 script_name=$(echo $0 | cut -d "." -f1)
 log_file=$logs_folder/$script_name.log
 
-mkdir -p $logs_folder
-
-echo "script execution start time: $date"
 
 if [ $id -ne 0 ]; then
-    echo -e "$R Please run this script as root user $N" | tee -a $log_file
+    echo -e "$R Please run this script as root user $N"
     exit 1
 fi
+mkdir -p $logs_folder
+echo "script execution start time: $(date)" | tee -a $log_file
 
 Validate() {
     if [ $1 -ne 0 ]; then

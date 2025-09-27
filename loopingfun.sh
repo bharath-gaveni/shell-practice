@@ -38,6 +38,8 @@ else
     echo -e "$package is already installed so $Y skipping... $N" | tee -a $log_file
 fi
 done
+echo "script execution end time is $(date)" | tee -a $log_file
+
 
 
 

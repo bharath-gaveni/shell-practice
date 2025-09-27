@@ -7,6 +7,7 @@ id=$(id -u)
 
 if [ $id -ne 0 ]; then
     echo "PLease run this script with root access privilage"
+    exit 1
 fi
 
 # in shell-script if some command throws error it will proceeds further exit1=failure, exit0=success.

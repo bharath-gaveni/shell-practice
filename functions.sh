@@ -4,6 +4,7 @@ id=$(id -u)
 
 if [ $id -ne 0 ]; then
     echo "Please run this script with root user privilage"
+    exit 1
 fi
 
 

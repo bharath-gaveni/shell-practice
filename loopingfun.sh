@@ -6,7 +6,7 @@ Y="\e[0;33m"
 
 id=$(id -u)
 if [ $id -ne 0 ]; then
-    echo " $R please execute this script as root user $N"
+    echo -e " $R please execute this script as root user $N"
     exit 1
 fi
 

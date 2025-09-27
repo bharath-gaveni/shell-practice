@@ -19,7 +19,7 @@ else
     echo "installing mysql is Success"
 fi
 
-dnf install nginxx -y
+dnf install nginx -y
 if [ $? -ne 0 ]; then
     echo "installing nginx is Failed"
     exit 1

@@ -20,7 +20,7 @@ Validate() {
         echo -e "installing $2 is $R failed $N"
         exit 1
     else
-        echo "installing $2 is $G success $N"
+        echo -e "installing $2 is $G success $N"
     fi        
 }    
 
@@ -45,6 +45,6 @@ fi
  dnf install python3 -y
  Validate $? "python3"
  else 
-    echo "python3 alredy installed so $Y Skipping $N"
+    echo -e "python3 alredy installed so $Y Skipping $N"
 fi       
     

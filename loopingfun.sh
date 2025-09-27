@@ -6,7 +6,7 @@ Y="\e[0;33m"
 
 id=$(id -u)
 if [ $id -ne 0 ]; then
-    echo "please execute this script as root user"
+    echo -e "$R please execute this script as root user $N"
     exit 1
 fi    
 
@@ -20,10 +20,10 @@ fi
 
  Validate() {
     if [ $1 -ne 0 ]; then
-        echo "installing $2 is failed" | tee -a $log_file
+        echo -e "installing $2 is $R failed $N" | tee -a $log_file
         exit 1
     else
-        echo "installing $2 is success" | tee -a $log_file
+        echo -e "installing $2 is $R success $N" | tee -a $log_file
     fi        
  }
 
@@ -35,7 +35,7 @@ if [ $? -ne 0 ]; then
 dnf install $package -y &>>$log_file
 Validate $? "$package"
 else
-    echo "$package is already installed so skipping..." | tee -a $log_file
+    echo -e "$package is already installed so $Y skipping... $N" | tee -a $log_file
 fi
 done
 

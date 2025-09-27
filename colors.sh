@@ -14,7 +14,7 @@ id=$(id -u)
     exit 1
 fi
 
-function() {
+Validate() {
     if [ $1 -ne 0 ]; then
         echo -e "installing $2 is $R failed $N"
         exit 1
@@ -35,7 +35,7 @@ fi
 dnf list installed nginx
 if [ $? -ne 0 ]; then
 dnf install nginx -y
-VALIDATE $? "nginx"
+Validate $? "nginx"
 else 
     echo -e "nginx is already installed so $Y skipping $N"
 fi
@@ -47,7 +47,7 @@ Validate $? "python3"
 else
     echo -e "python3 is already installed so $Y skipping $N"
 fi
-    
+
 
 
 

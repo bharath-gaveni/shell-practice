@@ -6,3 +6,4 @@ if [ $(($number % 2)) -eq 0 ]; then
 else
     echo "Given number $number is ODD"
 fi
+

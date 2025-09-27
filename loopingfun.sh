@@ -8,6 +8,7 @@ id=$(id -u)
 if [ $id -ne 0 ]; then
     echo "please execute this script as root user"
     exit 1
+fi    
 
  log_folder=/var/log/shell-script
  script_name=$(echo $0 | cut -d "." -f1)

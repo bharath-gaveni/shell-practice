@@ -3,11 +3,11 @@
 #color codes
 
 N="\e[0m"
-R= "\e[0;31m"
+R="\e[0;31m"
 G="\e[0;32m"
 Y="\e[0;33m"
 
-id =$(id -u)
+id=$(id -u)
 
 if [ $id -ne 0 ]; then
     echo -e "$R PLease run this script with root access $N"

@@ -3,7 +3,9 @@
 # id -u --> is 0 then it is root user othan than 0 it is not a root user
 # $? --> previous executed command exit status if $?=0 command success if $?=1 to 127 its command failure
 
-if [ id -u -ne 0 ]; then
+id=$(id -u)
+
+if [ $id -ne 0 ]; then
     echo "PLease run this script with root access privilage"
 fi
 

@@ -1,6 +1,8 @@
 #!/bin/bash
 
-if [ id -u -ne 0 ]; then
+id=$(id -u)
+
+if [ $id -ne 0 ]; then
     echo "Please run this script with root user privilage"
 fi
 

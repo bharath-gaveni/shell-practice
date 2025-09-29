@@ -2,5 +2,5 @@
 name=india
 echo "my country is $name"
 echo "PID of the script1 is: $$"
-sh script2.sh
-
+#sh script2.sh
+source ./script2.sh

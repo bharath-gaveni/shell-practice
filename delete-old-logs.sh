@@ -36,7 +36,7 @@ files=$(find /home/ec2-user/bharath -name "*.log" -mtime +14)
 while IFS=read -r file
 do
     echo "deleting the file ${file}"
-    rm -rf ${file}
+    rm -rf "${file}"
     echo "deleted the file ${file}"
 done <<< ${files}
 

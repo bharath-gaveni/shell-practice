@@ -18,13 +18,12 @@ mkdir -p $log_folder
     start_time=$(date +%s)
     echo "script execution started at time $(date)" | tee -a $log_file
 }
-logging
  id=$(id -u)
  if [ $id -ne 0 ]; then
     echo -e "$R Please run this script with root user privilage $N"
     exit 1
 fi
-
+logging 
 if [ ! -d "$source_dir" ]; then
     echo "ERROR: Source directory doesnt exist"
     exit 1

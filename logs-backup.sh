@@ -79,7 +79,9 @@ else
     done <<< "$files"  
 fi
 
-
+end_time=$(date +%s)
+total_time=$(($end_time-$start_time))
+echo "Total time taken to execute the script is $total_time seconds"
 
 
 

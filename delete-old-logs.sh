@@ -31,9 +31,9 @@ else
 fi
 
 files=$(find "$source_dir" -name "*.log" -type f -mtime +14)
-if [ ! -f "$files" ]; then
+if [ -z "$files" ]; then
     echo "No files found"
-    exit 1
+    exit 0
 else
     echo "Files FOund"
 fi        

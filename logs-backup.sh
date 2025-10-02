@@ -35,7 +35,7 @@ echo "script execution started at time $(date)"
 start_time=$(date +%s)
 
 if [ $# -lt 2 ]; then
-    echo "USAGE: sudo sh logs-backup.sh <source_dir> <destination_dir> <days [optional, 14 days]>"
+    echo -e "$R USAGE: sudo sh logs-backup.sh <source_dir> <destination_dir> <days [optional, 14 days]> $N"
     exit 1
 fi
 

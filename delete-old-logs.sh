@@ -31,9 +31,9 @@ else
     echo "source directory exists"
 fi
 
-files=$(find /home/ec2-user/bharath -name "*.log" -mtime +14)
+files=$(find "$source_dir" -name "*.log" -type f-mtime +14)
 
-while IFS=read -r file
+while IFS= read -r file
 do
     echo "deleting the file ${file}"
     rm -rf "${file}"

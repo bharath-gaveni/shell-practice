@@ -63,7 +63,7 @@ else
     time_stamp=$(date +%F-%H-%M)
     Zip_file_name=$destination_dir/backup-log/$time_stamp.zip
     echo "zip file name is : $Zip_file_name"
-    find "$source_dir" -name "*.log" -type file -mtime +14 | zip -@ -j $Zip_file_name
+    find "$source_dir" -name "*.log" -type f -mtime +14 | zip -@ -j $Zip_file_name
 fi    
 
 

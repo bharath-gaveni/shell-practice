@@ -19,7 +19,7 @@ G="\e[0;32m"
 Y="\e[0;33m"
 source_dir=$1
 destination_dir=$2
-days=${3 -14}
+days=${3:-14}
 
 id=$(id -u)
 if [ $id -ne 0 ]; then

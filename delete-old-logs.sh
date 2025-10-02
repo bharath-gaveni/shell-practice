@@ -22,8 +22,7 @@ fi
 mkdir -p $log_folder
     start_time=$(date +%s)
     echo "script execution started at time $(date)" | tee -a $log_file
-
-logging 
+ 
 if [ ! -d "$source_dir" ]; then
     echo "ERROR: Source directory doesnt exist"
     exit 1
@@ -32,6 +31,13 @@ else
 fi
 
 files=$(find "$source_dir" -name "*.log" -type f -mtime +14)
+if [ ! -f "$files" ]; then
+    echo "No files found"
+    exit 1
+else
+    echo "Files FOund"
+fi        
+
 
 while IFS= read -r file
 do

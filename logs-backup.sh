@@ -17,19 +17,49 @@ N="\e[0m"
 R="\e[0;31m"
 G="\e[0;32m"
 Y="\e[0;33m"
-check_root
+source_dir=$1
+destination_dir=$2
+days=${3 -14}
+
+id=$(id -u)
+if [ $id -ne 0 ]; then
+    echo -e "$R please execute this script with root access privilage $N"
+    exit 1
+fi
+
 log_folder=/var/log/shell-script
 script_name=$(echo $0 | cut -d "." -f1)
 log_file=$log_folder/$script_name.log
 mkdir -p $log_folder
-    echo "script execution started at time $(date)"
-    start_time=$(date +%s)
+echo "script execution started at time $(date)"
+start_time=$(date +%s)
 
-check_root() {
-    id=$(id -u)
-    if [ $id -ne 0 ]; then
-        echo -e "$R please execute this script with root access privilage $N"
-        exit 1
-    fi
-}
+if [ $# -lt 2 ]; then
+    echo "USAGE: sudo sh logs-backup.sh <source_dir> <destination_dir> <days [optional, 14 days]>"
+    exit 1
+fi
+
+
+if [ ! -d "$source_dir" ]; then
+    echo "Source directory not exist"
+    exit 1
+ fi
+
+
+ if [ ! -d "$destination_dir" ]; then
+    echo "Destination directory not exist"
+    exit 1
+fi
+
+files=$(find "$source_dir" -name "*.log" -type file -mtime +14)
+
+if [ ! -f "$files" ]; then
+    echo "NO files found"
+else
+    echo "files found"
+    
+        
+
+
+
 

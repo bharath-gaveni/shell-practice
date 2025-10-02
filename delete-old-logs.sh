@@ -12,7 +12,7 @@ Y="\e[0;33m"
 source_dir=/home/ec2-user/bharath
 log_folder=/var/log/shell-script
 script_name=$(echo $0 | cut -d "." -f1)
-file_name=$log_folder/$script_name.log
+log_file=$log_folder/$script_name.log
 logging() {
 mkdir -p $log_folder
     start_time=$(date +%s)

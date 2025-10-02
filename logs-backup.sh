@@ -61,13 +61,13 @@ if [ -z "$files" ]; then
 else
     echo "files found"
     time_stamp=$(date +%F-%H-%M)
-    Zip_file_name=$destination_dir/backup-log/$time_stamp.zip
+    Zip_file_name=$destination_dir/backup-log-$time_stamp.zip
     echo "zip file name is : $Zip_file_name"
     find "$source_dir" -name "*.log" -type f -mtime +14 | zip -@ -j $Zip_file_name
 fi    
 
 
-if [ ! -d "$Zip_file_name" ]; then
+if [ ! -f "$Zip_file_name" ]; then
     echo -e " $R Zip file is failed to save in destination directory $N"
 else
     echo -e "$G Zip file is succesfully saved in destination directory $N"

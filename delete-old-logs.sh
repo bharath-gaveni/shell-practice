@@ -13,10 +13,12 @@ source_dir=/home/ec2-user/bharath
 log_folder=/var/log/shell-script
 script_name=$(echo $0 | cut -d "." -f1)
 file_name=$log_folder/$script_name.log
-
+logging() {
 mkdir -p $log_folder
-start_time=$(date +%s)
-echo "script execution started at time $(date)" | tee -a $log_file
+    start_time=$(date +%s)
+    echo "script execution started at time $(date)" | tee -a $log_file
+}
+logging
  id=$(id -u)
  if [ $id -ne 0 ]; then
     echo -e "$R Please run this script with root user privilage $N"

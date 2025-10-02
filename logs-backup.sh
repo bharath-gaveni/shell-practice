@@ -52,7 +52,7 @@ if [ ! -d "$source_dir" ]; then
 fi
 
 
-files=$(find "$source_dir" -name "*.log" -type file -mtime +14)
+files=$(find "$source_dir" -name "*.log" -type f -mtime +14)
 
 
 if [ -z "$files" ]; then

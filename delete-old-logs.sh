@@ -31,7 +31,7 @@ else
     echo "source directory exists"
 fi
 
-files=$(find "$source_dir" -name "*.log" -type f-mtime +14)
+files=$(find "$source_dir" -name "*.log" -type f -mtime +14)
 
 while IFS= read -r file
 do
@@ -39,6 +39,10 @@ do
     rm -rf "${file}"
     echo "deleted the file ${file}"
 done <<< ${files}
+
+end_time=$(date +%s)
+total_time=$(($end_time-$start_time))
+echo "Total time taken to execute the script is $total_time seconds"
 
 
 

@@ -14,4 +14,4 @@ do
 
 done <<< $disk_usage
 
-echo "Message Body: $mesaage"
+echo "Message Body: $message"

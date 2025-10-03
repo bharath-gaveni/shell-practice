@@ -1,6 +1,6 @@
 #!/bin/bash
 
-disk_usage=$(df-h | grep -v Filesystem)
+disk_usage=$(df -hT | grep -v Filesystem)
 disk_threshold=2
 message=""
 

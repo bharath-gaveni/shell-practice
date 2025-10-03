@@ -9,9 +9,9 @@ do
     usage=$(echo $linebyline | awk '{print $6}' | cut -d "%" -f1)
     partion=$(echo $linebyline | awk '{print $7}')
     if [ $usage -ge $disk_threshold ]; then
-        message+="High Disk Usage on $partion:$usage"
+        message+="High Disk Usage on $partion:$usage \n"
     fi  
 
 done <<< $disk_usage
 
-echo "Message Body: $message"
+echo -e "Message Body: $message"
